@@ -32,17 +32,12 @@ body {
 
 h1 {
   font-family: 'chopin_scriptregular';
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   margin:.2em;
+  color: #220000;
   text-shadow: 0 0 5px rgba(240,48,23,1);
 }
 
 button {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   width: 250px;
   padding: .3em;
   font-weight: bold;
@@ -57,17 +52,49 @@ button {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#611002', endColorstr='#420701', GradientType=1 );
 }
 
+button:hover {
+  animation: shake .15s;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(2deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  70% {
+    transform: rotate(-2deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 span {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
   font-weight: bold;
 }
 
 .results {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  color: #3c0101;
   font-weight: bold;
   line-height: 2;
   background: rgba(221,221,221,0.7);
@@ -101,9 +128,6 @@ span {
 }
 
 footer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   padding: .3rem;
 }
 
@@ -123,10 +147,21 @@ footer {
 
 .socialmedia img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 0 .5px #97db01;
-  border: 1.5px rgba(240,48,23,1) solid;
+  box-shadow: 0 0 0 .5px #ccc;
+  border: 1.5px rgba(66,7,1,1) solid;
   border-radius: 50%;
-  background: rgba(230,62,51,0.5);
+  animation: top-up .35s;
+  animation-fill-mode: forwards;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+@keyframes top-up {
+  0% {
+  }
+  100% {
+    background: rgba(240,48,23,1);
+  }
 }
 
 @media (max-width: 749px) {
