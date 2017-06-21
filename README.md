@@ -7,4 +7,4 @@ Technologies used:
 - HTML5;
 - CSS3;
 
-https://chris86g.github.io/Wine-Cellar/
+https://chris86g.github.io/Wine_Cellar/
