@@ -36,12 +36,15 @@ document.addEventListener("DOMContentLoaded", function() {
   btn.addEventListener('click', function () {
     error.innerText = '';
     results.innerText = '';
+    results.classList.add('hidden');
+    error.classList.add('hidden');
 
     var data = getDataFromBackend();
 
     data.then(function(resolve){
       console.log(resolve.items);
       var items = resolve.items;
+      results.classList.remove('hidden');
       results.innerText = `number of items in stock: ${items.length} \n`;
       for (var i = 0; i < items.length; i++) {
         results.innerText += `${items[i].name} (${items[i].type}) costs: ${items[i].price}£ \n`;
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }).catch(function(reject) {
         console.log(reject.message);
         var message = reject.message;
+        error.classList.remove('hidden');
         error.innerText = message;
     });
 
