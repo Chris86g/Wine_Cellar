@@ -1,0 +1,12 @@
+#loadingIndicator {
+  color: #999;
+}
+#error {
+  color: #aa0000;
+}
+.disabled {
+  background-color: #ccc;
+}
+.hidden {
+  visibility: hidden;
+}
